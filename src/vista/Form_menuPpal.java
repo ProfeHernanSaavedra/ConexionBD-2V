@@ -32,6 +32,8 @@ public class Form_menuPpal extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jmi_ingresarCarrera = new javax.swing.JMenuItem();
         jmi_listarCarrera = new javax.swing.JMenuItem();
+        jmi_eliminar = new javax.swing.JMenuItem();
+        jmi_actualizarCarrera = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmi_salir = new javax.swing.JMenuItem();
 
@@ -50,7 +52,28 @@ public class Form_menuPpal extends javax.swing.JFrame {
         jMenu3.add(jmi_ingresarCarrera);
 
         jmi_listarCarrera.setText("Listar Carrera");
+        jmi_listarCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listarCarreraActionPerformed(evt);
+            }
+        });
         jMenu3.add(jmi_listarCarrera);
+
+        jmi_eliminar.setText("Eliminar Carrera");
+        jmi_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmi_eliminar);
+
+        jmi_actualizarCarrera.setText("Actualizar Carrera");
+        jmi_actualizarCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_actualizarCarreraActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmi_actualizarCarrera);
 
         jMenu1.add(jMenu3);
 
@@ -90,12 +113,26 @@ public class Form_menuPpal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmi_salirActionPerformed
 
     private void jmi_ingresarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_ingresarCarreraActionPerformed
-        
+
         Form_ingresarCarrera fic = new Form_ingresarCarrera();
         fic.setVisible(true);
-        
-        
     }//GEN-LAST:event_jmi_ingresarCarreraActionPerformed
+
+    private void jmi_listarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listarCarreraActionPerformed
+        Form_listarCarrera flc = new Form_listarCarrera();
+        flc.setVisible(true);
+    }//GEN-LAST:event_jmi_listarCarreraActionPerformed
+
+    private void jmi_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminarActionPerformed
+
+        Form_eliminarCarrera fec = new Form_eliminarCarrera();
+        fec.setVisible(true);
+    }//GEN-LAST:event_jmi_eliminarActionPerformed
+
+    private void jmi_actualizarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_actualizarCarreraActionPerformed
+        Form_actualizarCarrera fac = new Form_actualizarCarrera();
+        fac.setVisible(true);
+    }//GEN-LAST:event_jmi_actualizarCarreraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +174,8 @@ public class Form_menuPpal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jmi_actualizarCarrera;
+    private javax.swing.JMenuItem jmi_eliminar;
     private javax.swing.JMenuItem jmi_ingresarCarrera;
     private javax.swing.JMenuItem jmi_listarCarrera;
     private javax.swing.JMenuItem jmi_salir;
